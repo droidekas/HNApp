@@ -1,11 +1,20 @@
 package com.geronimo.hnapp.activities;
 
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.geronimo.hnapp.R;
+import com.geronimo.hnapp.util.CommonUtil;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import org.json.JSONObject;
+
+import java.io.IOException;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
 
@@ -38,4 +48,16 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void  performApiCall(String url) throws Exception {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder().url(url).build();
+        Response response = client.newCall(request).execute();
+        CommonUtil.logger(response.body().string(),getClass());
+
+
+
+    }
+
+
 }
