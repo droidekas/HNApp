@@ -1,5 +1,6 @@
 package com.geronimo.hnapp.activities;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     private SwipeActionAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
