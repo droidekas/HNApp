@@ -36,7 +36,7 @@ public class MainRecyclerView extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         hnAdapter = new RecyclerViewAdapter(getData());
-        mAdapter = new SwipeActionAdapter(hnAdapter);
+//        mAdapter = new SwipeActionAdapter(hnAdapter);
         mRecyclerView.setAdapter(hnAdapter);
 
 
