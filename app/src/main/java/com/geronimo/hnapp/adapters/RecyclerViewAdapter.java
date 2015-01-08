@@ -1,6 +1,5 @@
 package com.geronimo.hnapp.adapters;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +7,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.geronimo.hnapp.R;
-import com.geronimo.hnapp.models.HNItem;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.TimeZone;
+
+import com.geronimo.hnapp.models.HNItem;
+import com.geronimo.hnapp.views.VerticalTextView;
 
 /**
  * Created by 5013003250 on 1/5/2015.
@@ -31,7 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView title;
         public TextView by;
         public TextView time;
-        public TextView type;
+        public VerticalTextView type;
 
 
         public ViewHolder(View v) {
@@ -40,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             title = (TextView) v.findViewById(R.id.item_title);
             by = (TextView) v.findViewById(R.id.item_by);
             time = (TextView) v.findViewById(R.id.item_time);
-            type = (TextView) v.findViewById(R.id.item_type);
+            type = (VerticalTextView) v.findViewById(R.id.item_comments_count);
         }
     }
 

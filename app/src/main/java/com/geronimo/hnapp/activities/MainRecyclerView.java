@@ -4,20 +4,17 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.geronimo.hnapp.R;
-import com.geronimo.hnapp.adapters.HNItemAdpater;
 import com.geronimo.hnapp.adapters.RecyclerViewAdapter;
-import com.geronimo.hnapp.models.HNItem;
 import com.geronimo.hnapp.util.CommonUtil;
-import com.wdullaer.swipeactionadapter.SwipeActionAdapter;
 
 import org.json.JSONObject;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+
+import com.geronimo.hnapp.models.HNItem;
 
 public class MainRecyclerView extends Activity {
 

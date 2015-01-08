@@ -10,19 +10,22 @@ import android.widget.TextView;
 
 import com.geronimo.hnapp.R;
 import com.geronimo.hnapp.models.HNItem;
+import com.geronimo.hnapp.views.VerticalTextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 /**
  * Created by 5013003250 on 12/23/2014.
  */
-public class HNItemAdpater extends BaseAdapter{
+public class HNItemAdpater extends BaseAdapter {
 
-    private Context _context;
+
     private ArrayList<HNItem> itemList;
 
-    public HNItemAdpater(Context _context, ArrayList<HNItem> itemList) {
-        this._context = _context;
+    public HNItemAdpater(ArrayList<HNItem> itemList) {
+
         this.itemList = itemList;
     }
 
@@ -44,13 +47,41 @@ public class HNItemAdpater extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if(convertView==null){
-            LayoutInflater mInflater=(LayoutInflater) _context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView=mInflater.inflate(R.layout.list_item,parent,false);
+        if (convertView == null) {
+            LayoutInflater mInflater = (LayoutInflater) parent.getContext().getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            convertView = mInflater.inflate(R.layout.list_item, parent, false);
         }
-
-        TextView titleView=(TextView) convertView.findViewById(R.id.title);
-        titleView.setText(itemList.get(position).getTitle());
+        ViewHolder vh = new ViewHolder(convertView);
+        vh.score.setText(String.valueOf(itemList.get(position).getScore()));
+        vh.title.setText(itemList.get(position).getTitle());
+        vh.by.setText(itemList.get(position).getBy());
+        String timeText = "";
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeZone(TimeZone.getTimeZone("UTC"));
+        cal.setTimeInMillis(itemList.get(position).getTime());
+        timeText = (cal.get(Calendar.YEAR) + " " + (cal.get(Calendar.MONTH) + 1) + " "
+                + cal.get(Calendar.DAY_OF_MONTH) + " " + cal.get(Calendar.HOUR_OF_DAY) + ":"
+                + cal.get(Calendar.MINUTE));
+        vh.time.setText(timeText);
+        vh.type.setText(String.valueOf(itemList.get(position).getKids().length));
         return convertView;
+    }
+
+    public static class ViewHolder {
+        // each data item is just a string in this case
+        public TextView score;
+        public TextView title;
+        public TextView by;
+        public TextView time;
+        public VerticalTextView type;
+
+
+        public ViewHolder(View v) {
+            score = (TextView) v.findViewById(R.id.item_score);
+            title = (TextView) v.findViewById(R.id.item_title);
+            by = (TextView) v.findViewById(R.id.item_by);
+            time = (TextView) v.findViewById(R.id.item_time);
+            type = (VerticalTextView) v.findViewById(R.id.item_comments_count);
+        }
     }
 }
