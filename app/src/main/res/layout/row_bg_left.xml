@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minHeight="80dp"
+    android:gravity="center_vertical|left"
+    android:layout_height="?android:listPreferredItemHeight"
+    android:background="#FF4D2E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Follow feed" />
+
+
+</LinearLayout>
