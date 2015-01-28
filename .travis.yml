@@ -8,7 +8,7 @@ branches:
  - gh-pages
  - development
 
-script: jekyll build
+script: gulp publish
 
 env:
  global:
