@@ -8,8 +8,12 @@ branches:
  - gh-pages
  - development
 
+before_script:
+ - npm install
 
-script: gem install jekyll
+script: 
+ - gem install jekyll 
+ - gulp publish
 
 env:
  global:
