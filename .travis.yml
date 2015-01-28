@@ -11,7 +11,7 @@ branches:
 before_script:
  -gem install jekyll
 
-script: npm install && gulp publish
+script: gulp publish
 
 env:
  global:
