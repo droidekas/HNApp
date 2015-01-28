@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.0.0
+- 2.1
 
 
 branches:
@@ -8,10 +8,8 @@ branches:
  - gh-pages
  - development
 
-before_script:
- -gem install jekyll
 
-script: gulp publish
+script: gem install jekyll
 
 env:
  global:
