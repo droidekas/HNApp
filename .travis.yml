@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.1
+- 2.1.5
 
 
 branches:
@@ -14,6 +14,7 @@ before_script:
 script: 
  - gem install jekyll 
  - gulp publish
+ - ENV['TestVariable']
 
 env:
  global:
