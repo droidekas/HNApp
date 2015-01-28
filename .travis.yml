@@ -14,7 +14,7 @@ before_script:
 script: 
  - gem install jekyll 
  - gulp publish
- - ENV['TestVariable']
+ - process.env.TestVariable
 
 env:
  global:
