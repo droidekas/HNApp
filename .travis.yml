@@ -9,6 +9,5 @@ branches:
  -development
 
 env:
-  global:
-  	GH_REF:github.com/droidekas/HNApp.git
-    secure: Hytqq10mkCScBZM/k45O/mJdYtluhvsJkZCrQtev+LObkR47+FEU+V6W7BsDHp1GQR1Xi9vAL5LkUdZ4oeZtVq326QO5xz79Y+MWztFv9RXHq372YynNujquKtjr3I/TZq+tO47B2q08hlChQ+hw0D+PYo9OIOQ7Fzsu/qBJfPo=
+ global:
+  secure: Hytqq10mkCScBZM/k45O/mJdYtluhvsJkZCrQtev+LObkR47+FEU+V6W7BsDHp1GQR1Xi9vAL5LkUdZ4oeZtVq326QO5xz79Y+MWztFv9RXHq372YynNujquKtjr3I/TZq+tO47B2q08hlChQ+hw0D+PYo9OIOQ7Fzsu/qBJfPo=
