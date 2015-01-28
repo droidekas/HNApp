@@ -118,7 +118,7 @@ gulp.task('deploy', function () {
     .pipe($.ghPages({
       // Currently only personal GitHub Pages are supported so it will upload to the master
       // branch and automatically overwrite anything that is in the directory
-      remoteUrl: 'https://'+process.env.GH_TOKEN+'@github.com/droidekas/HNApp.git',
+      // remoteUrl: 'https://VI34L7RdfkPpx-nMLDmLEQ@github.com/droidekas/HNApp.git',
       branch: 'gh-pages'
       }));
 });
