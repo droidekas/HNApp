@@ -1,9 +1,7 @@
 language: ruby
 rvm:
 - 2.0.0
-- 1.9.3
-- jruby-19mode
-- rbx-2
+
 
 branches:
  only:
@@ -12,11 +10,8 @@ branches:
 
 before_script:
  -gem install jekyll
- -gem install rouge
- -npm install
 
-
-script: gulp publish
+script: npm install && gulp publish
 
 env:
  global:
