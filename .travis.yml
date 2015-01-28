@@ -1,6 +1,9 @@
 language: ruby
 rvm:
- -"2.0.0"
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
 
 branches:
  only:
@@ -18,3 +21,4 @@ script: gulp publish
 env:
  global:
   secure: Hytqq10mkCScBZM/k45O/mJdYtluhvsJkZCrQtev+LObkR47+FEU+V6W7BsDHp1GQR1Xi9vAL5LkUdZ4oeZtVq326QO5xz79Y+MWztFv9RXHq372YynNujquKtjr3I/TZq+tO47B2q08hlChQ+hw0D+PYo9OIOQ7Fzsu/qBJfPo=
+
