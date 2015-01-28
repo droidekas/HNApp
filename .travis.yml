@@ -5,10 +5,10 @@ node_js:
 
 branches:
  only:
- -gh-pages
- -development
+ - gh-pages
+ - development
 
-script:jekyll build
+script: jekyll build
 
 env:
  global:
