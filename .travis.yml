@@ -5,6 +5,7 @@ node_js:
 branches:
  only:
  -gh-pages
+ -development
 
 env:
   global:
