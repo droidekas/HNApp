@@ -16,9 +16,8 @@ script:
  - gulp publish
 
 after_success:
- - git config --global user.email $GIT_EMAIL
- - git config --global user.name $GIT_NAME
- # - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+ - git config --global user.email  "mail+travis@droidekas.github.io"
+ - git config --global user.name "Travis-CI"
  - gulp deploy
 
 
