@@ -11,9 +11,18 @@ script:
 - gem install jekyll
 - gulp publish
 after_success:
+<<<<<<< HEAD
 - git config --global user.email  "mail+travis@droidekas.github.io"
 - git config --global user.name "Travis-CI"
 - gulp deploy
+=======
+ # - git remote set-url origin "https://${GH_TOKEN}@github.com/droidekas/HNApp.git"
+ - git config --global user.email  "mail+travis@droidekas.github.io"
+ - git config --global user.name "Travis-CI"
+ - gulp deploy
+
+
+>>>>>>> a95eaa887b93c946dd03a6bed6366e55c1b2f606
 env:
   global:
     secure: lBZPEyJwB+QUrQpHApMsgap3qfyDZw9oJ/uaCFlxhzR+Grjfj20mLCEdOwlTftd2fcwn1I/6VfMhiGuurFQiZA+tiUxgsR+TXWiUfaLMARQiEOcrrzbeGHldvaxV1DoGAgcmQ2p5EihMVjewFj6OWWnUXNFeEvZnLg4bGGlyXOk=
