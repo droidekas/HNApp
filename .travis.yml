@@ -1,27 +1,19 @@
 language: ruby
 rvm:
 - 2.1.5
-
-
 branches:
- only:
- - gh-pages
- - development
-
+  only:
+  - gh-pages
+  - development
 before_script:
- - npm install
-
-script: 
- - gem install jekyll 
- - gulp publish
-
+- npm install
+script:
+- gem install jekyll
+- gulp publish
 after_success:
- - git config --global user.email  "mail+travis@droidekas.github.io"
- - git config --global user.name "Travis-CI"
- - gulp deploy
-
-
+- git config --global user.email  "mail+travis@droidekas.github.io"
+- git config --global user.name "Travis-CI"
+- gulp deploy
 env:
- global:
-  secure: Hytqq10mkCScBZM/k45O/mJdYtluhvsJkZCrQtev+LObkR47+FEU+V6W7BsDHp1GQR1Xi9vAL5LkUdZ4oeZtVq326QO5xz79Y+MWztFv9RXHq372YynNujquKtjr3I/TZq+tO47B2q08hlChQ+hw0D+PYo9OIOQ7Fzsu/qBJfPo=
-
+  global:
+    secure: lBZPEyJwB+QUrQpHApMsgap3qfyDZw9oJ/uaCFlxhzR+Grjfj20mLCEdOwlTftd2fcwn1I/6VfMhiGuurFQiZA+tiUxgsR+TXWiUfaLMARQiEOcrrzbeGHldvaxV1DoGAgcmQ2p5EihMVjewFj6OWWnUXNFeEvZnLg4bGGlyXOk=
